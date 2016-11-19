@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="jquery-3.1.1.min.js"></script>
+    <script src="f5-configuration.js"></script>
+    <script src="f5-service-utility.js"></script>
+    <script>
+    $(document).ready(function(){
+      var request = { "name":"Test1",
+                      "emailId":"xxx@gmail.com",
+                      "mobileNumber":"3234567890",
+                      "dateOfBirth":"09102016"
+                    };
+
+      F5.http().get('locations')
+               .then(function(response){
+                 alert(response);
+               });
+    });
+    </script>
+  </head>
+</html>

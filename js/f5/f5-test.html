@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="f5-core.js"></script>
+        <script src="f5-formatters.js"></script>
+        <script src="f5-ui.js"></script>
+        <script src="f5-ui-views.js"></script>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+               var hoursView = F5.UIViews.hoursView($('#hours-view')),
+                   datesView = F5.UIViews.datesView($('#dates-view'));
+                
+                datesView.addOnChange(hoursView.refresh);
+            });
+        </script>
+        
+    </head>
+    <body>
+        <select id="dates-view">
+        </select>
+        <select id="hours-view">
+        </select>
+    </body>
+</html>
