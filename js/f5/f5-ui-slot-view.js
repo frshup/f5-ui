@@ -51,6 +51,8 @@
         var markup = slotsRenderer(slots);
         state.container$.empty();
         state.container$.append(markup);
+          
+        selected(slots[0]);
       }
 
       function bindChangeEvent(){
