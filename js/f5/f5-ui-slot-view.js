@@ -12,7 +12,7 @@
      function selected(selectedSlotItem){
        console.log(selectedSlotItem);
        state.selected = selectedSlotItem;
-       container$.prop('selectedSlot', state.selected);
+        state.container$.prop('selectedSlot', state.selected);
     //raiseOnChange(changeHandlers, packageItem);
      }
 
