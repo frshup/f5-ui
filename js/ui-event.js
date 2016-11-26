@@ -55,6 +55,7 @@ function displayConfirmForm(){
 }
 
 function bookNowClicked(){
+  alert("booknow");
   function onSuccess(response){
     if (!response) alert("Error in processing request!!!");
 
@@ -88,22 +89,22 @@ function bookConfirmClicked(){
 
 
 //Check user has provided all the value
-	if(formValidation()){
+	
 
 		//Now prepare the request parameters
 		//alert("break 1");
 
 		var reqObj = new Object();
 
-		reqObj.name = $("#inputName").val();
-		reqObj.emailId = $("#inputEmail").val();
-		reqObj.mobileNumber = $("#inputPhone").val();
+		reqObj.name = $("#name").val();
+		reqObj.emailId = $("#email").val();
+		reqObj.mobileNumber = $("#mobile").val();
 		reqObj.dateOfBirth = "09102016";
-		reqObj.password = $("#inputPhone").val();
+		reqObj.password = $("#mobile").val();
 
 		//Call the http request.
 		registerCustomer(reqObj,callbackAddNewCustomer);
-	}
+	
 
 }
 

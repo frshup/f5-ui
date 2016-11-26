@@ -230,7 +230,7 @@ jQuery(document).ready(function () {
 
     // Isotope
  window.onload = function () {	
-    init();
+    
     if (jQuery().isotope) {
         // cache container
         var jQuerycontainer1 = jQuery('.room-list');
@@ -299,6 +299,7 @@ jQuery(document).ready(function () {
             jQueryfilterLink.find('.active').removeClass('active');
             jQuerythis.addClass('active');
         });
+		init();
     }
 }
 

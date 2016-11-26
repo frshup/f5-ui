@@ -1,11 +1,12 @@
 (function (global) {
-     var PACKAGES = [{name:'Single Bed', value: 1, imgUrl:'1.png', slots:[{value:4, unit:'Hrs'}]},
-                     {name:'Bunker Bed', value: 2, imgUrl:'2.png', slots:[{value:4, unit:'Hrs'}, {value:6, unit:'Hrs'}]},
-                     {name:'Recliner', value: 3, imgUrl:'3.png', slots:[{value:2, unit:'Hrs'}, {value:4, unit:'Hrs'}, {value:6, unit:'Hrs'}]},
-                     {name:'Sofa', value: 4, imgUrl:'4.png', slots:[{value:2, unit:'Hrs'}, {value:4, unit:'Hrs'}, {value:6, unit:'Hrs'}]}];
+     var PACKAGES = [            
+                     {name:'Lounge chair', value: 4, imgUrl:'4.png', slots:[{value:2, unit:'Hrs'}, {value:4, unit:'Hrs'}, {value:6, unit:'Hrs'}]},
+                     {name:'Lounge Recliner', value: 3, imgUrl:'3.png', slots:[{value:2, unit:'Hrs'}, {value:4, unit:'Hrs'}, {value:6, unit:'Hrs'}]},
+                     {name:'Flat Bed', value: 1, imgUrl:'1.png', slots:[{value:4, unit:'Hrs'}]},
+                     {name:'Bunker Bed', value: 2, imgUrl:'2.png', slots:[{value:4, unit:'Hrs'}, {value:6, unit:'Hrs'}]}];
 
      var state = {packages:[], selected:null,
-                  container$:null, changeHandlers:[]};
+                  container$:null, changeHandlers:[]}; 
 
      function packageView(container$){
          initialize(container$);

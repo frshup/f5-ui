@@ -379,30 +379,30 @@ margin-top: -17px;
 }
 /* Background patterns */
 .pattern-1 {
-	background:url(../images/patterns/xv_@2X.png) center center repeat;
+	background:url(../images/patterns/xv_%402X.png) center center repeat;
 }
 .pattern-2 {
-	background:url(../images/patterns/purty_wood_@2X.png) center center repeat;
+	background:url(../images/patterns/purty_wood_%402X.png) center center repeat;
 }
 .pattern-3 {
-	background:url(../images/patterns/hexellence_@2X.png) center center repeat;
+	background:url(../images/patterns/hexellence_%402X.png) center center repeat;
 }		
 .pattern-4 {
-	background:url(../images/patterns/brushed_alu_@2X.png) center center repeat;
+	background:url(../images/patterns/brushed_alu_%402X.png) center center repeat;
 }
 .pattern-5 {
-	background:url(../images/patterns/grid_noise_@2X.png) center center repeat;
+	background:url(../images/patterns/grid_noise_%402X.png) center center repeat;
 }
 .pattern-6 {
-	background:url(../images/patterns/diamond_upholstery_@2X.png) center center repeat;
+	background:url(../images/patterns/diamond_upholstery_%402X.png) center center repeat;
 }
 .pattern-7 {
-	background:url(../images/patterns/escheresque_@2X.png) center center repeat;
+	background:url(../images/patterns/escheresque_%402X.png) center center repeat;
 }
 .pattern-8 {
-	background:url(../images/patterns/knitting250px_@2X.png) center center repeat;
+	background:url(../images/patterns/knitting250px_%402X.png) center center repeat;
 }
 .pattern-9 {
-	background:url(../images/patterns/bo_play_pattern_@2X.png) center center repeat;
+	background:url(../images/patterns/bo_play_pattern_%402X.png) center center repeat;
 }
 }

@@ -207,6 +207,7 @@ input::-moz-focus-inner {
 textarea {
   overflow: auto;
   vertical-align: top;
+  
 }
 
 table {
@@ -1978,7 +1979,8 @@ fieldset[disabled] .form-control {
 }
 
 textarea.form-control {
-  height: auto;
+/*  height: auto;*/
+    height:132px;
 }
 
 .form-group {
