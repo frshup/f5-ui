@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
@@ -38,30 +38,24 @@
 <script type="text/javascript" src="rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
 <script type="text/javascript" src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
 <script type="text/javascript" src="js/custom.js"></script>
-<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
 
-    <!-- Application backend Service JS -->
-    <script src="js/f5/f5-core.js"></script>
-    <script src="js/f5/f5-ui-helper.js"></script>
-    <script src="js/f5/f5-service-utility.js"></script>
-    <script src="js/f5/f5-service-impl.js"></script>
-    <script src="js/f5/f5-configuration.js"></script>
-    <script src="js/f5/f5-ui.js"></script>
-    <script src="js/f5/f5-formatters.js"></script>
+<!-- Application backend Service JS -->
+<script src="js/f5/f5-core.js"></script>
+<script src="js/f5/f5-ui-helper.js"></script>
+<script src="js/f5/f5-service-utility.js"></script>
+<script src="js/f5/f5-service-impl.js"></script>
+<script src="js/f5/f5-configuration.js"></script>
+<script src="js/f5/f5-ui.js"></script>
+<script src="js/f5/f5-formatters.js"></script>
 
-    <script src="js/f5/f5-ui-views.js"></script>
-    <script src="js/f5/f5-ui-package-view.js"></script>
-    <script src="js/f5/f5-ui-slot-view.js"></script>
-    <script src="js/f5/f5-ui-booknow-header-view.js"></script>
+<script src="js/f5/f5-ui-views.js"></script>
+<script src="js/f5/f5-ui-package-view.js"></script>
+<script src="js/f5/f5-ui-slot-view.js"></script>
+<script src="js/f5/f5-ui-booknow-header-view.js"></script>
 
-    <!-- Application based custom JS -->
-    <script src="js/util.js"></script>
-    
+<!-- Application based custom JS -->
+<script src="js/util.js"></script>
+
 
 </head>
 
@@ -211,16 +205,8 @@
               <div class="form-group">
                 <label for="room"><!--How do want to -->Type</label>
                 <div class="popover-icon" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="How do want to relax?"> <i class="fa fa-info-circle fa-lg"> </i> </div>
-                
-
-                <!--<select class="form-control" name="packages" id="packages">
-                  <option selected="selected" disabled="disabled">Select a Type</option>
-                  <option value="Single Bed">Single Bed </option>
-                  <option value="Recliner">Recliner</option>
-                  <option value="Dormitory">Dormitory</option>
-                </select>-->
                 <select class="form-control" name="packages" id="packages-view">
-		</select>
+		            </select>
 
               </div>
             </div>
@@ -229,17 +215,9 @@
               <div class="form-group">
                 <label for="checkout"><!--How long you want to -->How Long?</label>
                 <div class="popover-icon" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="How long you want to Relax?"> <i class="fa fa-info-circle fa-lg"> </i> </div>
-                <!--<select class="form-control" name="room" id="room">
-                  <option selected="selected" disabled="disabled">4 Hrs</option>
-                  <option value="4">4 Hrs</option>
-                  <option value="5">5 Hrs</option>
-                  <option value="6">6 Hrs</option>
-                  <option value="7">7 Hrs</option>
-                  <option value="8">8 Hrs</option>
-                  <option value="full">1 Day</option>
-                </select>-->
+
                 <select class="form-control" name="slots" id="slots-view">
-		</select>
+		            </select>
               </div>
             </div>
             <div class="col-sm-2">
@@ -250,210 +228,42 @@
       </div>
     </div>
   </div>
+
 </section>
 
  <!-- About -->
-<section class="about mt50">
-       <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <h3 class="freshupavgtext">FreshUp is a Poshtel situated in your vicinity. It helps you to freshen up while you are on a move. You can refresh yourself with rest and lip smacking food. You can charge your mobile, dry your clothes and place your personal belongings if you do not want to carry them with you during your travel.</h3>
-        </div>
-        </div>
-        </div>
-
-    </section>
+<section id="above-section" data-template-url="templates/about.html" class="about mt50">
+</section>
 
 <!-- Services Types -->
-<section class="rooms mt50">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <h2 class="lined-heading"><span>Relax and Recline at FreshUp</span></h2>
-        <h3 class="freshupmedtext">FreshUp offers you various modes of freshening up. You can choose a single bed, recliner or a dormitory.</h3>
-      </div>
-
-
-
-      <!-- Room -->
-      <div class="col-sm-4">
-        <div class="room-thumb"> <img src="images/rooms/single-bed.png" alt="Single Bed" class="img-responsive" />
-          <div class="mask">
-            <div class="main">
-              <h5>Single Bed</h5>
-              <div class="price">&#8377; 249<span>a night</span></div>
-            </div>
-            <div class="content">
-              <p>Single beds are smaller beds but they offer the same comfort as bigger once. If you just want to rest for sometime say for 4 hours you can have this facility. This will help you to freshen yourself before a client meeting or a business meet.</p>
-
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Room -->
-      <div class="col-sm-4">
-        <div class="room-thumb"> <img src="images/rooms/Recliner.png" alt="Recliner" class="img-responsive" />
-          <div class="mask">
-            <div class="main">
-              <h5>Recliner </h5>
-              <div class="price">&#8377; 149<span>a night</span></div>
-            </div>
-            <div class="content">
-              <p>It offers you the facility to rest in a recliner. You can seat and rest by means of this. You can rest your back and legs if you are tiered after a long walk. You can also relax and do some important work that you have to do. </p>
-
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Room -->
-      <div class="col-sm-4">
-        <div class="room-thumb"> <img src="images/rooms/Dormitory.png" alt="Dormitory" class="img-responsive" />
-          <div class="mask">
-            <div class="main">
-              <h5>Dormitory</h5>
-              <div class="price">&#8377; 99<span>a night</span></div>
-            </div>
-            <div class="content">
-              <p>FreshUp has the facility of dormitory too. You can share the room with your co traveler or other guest. It gives you the chance in a more proper manner. You get all the other facilities that the Poshtel offers. </p>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<section id="service-types-section" data-template-url="templates/service-types.html" class="rooms mt50">
 </section>
 
 <!-- Our Services -->
-<section class="usp mt100">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <h2 class="lined-heading"><span>Our Services</span></h2>
-      </div>
-
-     <div class="col-sm-4 bounceIn appear" data-start="0">
-      <div class="box-icon">
-        <div align="center"><img src="images/icon/travel-consumables.png" alt="travel-consumables" class="img-responsive" /></div>
-        <h3>Travel Consumables</h3>
-        <p>Toiletries and a dental kit are available and billed on actuals.</p>
-        </div>
-        </div>
-
-      <div class="col-sm-4 bounceIn appear" data-start="200">
-      <div class="box-icon">
-        <div align="center"><img src="images/icon/Snacks-Beverages.png" alt="Snacks-Beverages" class="img-responsive" /></div>
-        <h3>Snacks & Beverages</h3>
-        <p>All major items are available with us. </p>
-        </div>
-        </div>
-
-      <div class="col-sm-4 bounceIn appear" data-start="400">
-      <div class="box-icon">
-        <div align="center"><img src="images/icon/Mini-Business-Centre.png" alt="Mini-Business-Centre" class="img-responsive" /></div>
-        <h3>Mini Business Centre</h3>
-        <p>You can call over your clients for a quick meeting.  </p>
-         </div>
-        </div>
-
-    </div>
-  </div>
+<section id="service-section" data-template-url="templates/services.html" class="usp mt100">
 </section>
 
 <!-- Our Services Second row -->
-<section class="usp mt50">
-  <div class="container">
-    <div class="row">
-        <div class="col-sm-4 bounceIn appear" data-start="0">
-      <div class="box-icon">
-        <div align="center"><img src="images/icon/Cloak-Room.png" alt="Cloak-Room" class="img-responsive" /></div>
-        <h3>Cloak Room</h3>
-        <p>Leave your baggage with us when you step out for your meeting. </p>
-        </div>
-    </div>
-    <div class="col-sm-4 bounceIn appear" data-start="200">
-      <div class="box-icon">
-        <div align="center"><img src="images/icon/Ironing.png" alt="Ironing" class="img-responsive" /></div>
-        <h3>Ironing</h3>
-        <p>Your clothes can be crisply ironed for that sharp business look.</p>
-         </div>
-    </div>
-    <div class="col-sm-4 bounceIn appear" data-start="400">
-      <div class="box-icon">
-        <div align="center"><img src="images/icon/Locker.png" alt="Locker" class="img-responsive" /></div>
-        <h3>Locker</h3>
-        <p>Your belongings will be under lock and key for a nominal charge.</p>
-         </div>
-    </div>
-
-
-
-
-
-    </div>
-  </div>
+<section id="service-additional-section" data-template-url="templates/services-addtional.html" class="usp mt50">
 </section>
 
 
 <!-- Footer -->
-<footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4 col-sm-3">
-        <h4>About FreshUp</h4>
-        <p>By far the best located poshtel giving the best home away services. The service offered is top-notch. The design of the Poshtel is smart and trendy. The service personnel are well trained to give you a pleasing and social stay while you stay with them.<br>
-           </p>
-      </div>
-      <!--<div class="col-md-3 col-sm-3">
-        <h4>Recieve our newsletter</h4>
-        <p>Suspendisse sed sollicitudin nisl, at dignissim libero. Sed porta tincidunt ipsum, vel volutpa!</p>
-        <form role="form">
-          <div class="form-group">
-            <input name="newsletter" type="text" id="newsletter" value="" class="form-control" placeholder="Please enter your E-mailaddress">
-          </div>
-          <button type="submit" class="btn btn-lg btn-black btn-block">Submit</button>
-        </form>
-      </div>-->
-      <div class="col-md-4 col-sm-3">
-        <h4>From our blog</h4>
-        <ul>
-          <li><a href="#">Places to visit Hyderabad<br>
-            December 19, 2016</a></li>
-          <li><a href="#">How to Pack for Travel?<br>
-            December 15, 2016</a></li>
-          <li><a href="#">What is inside the Bag?<br>
-            December 11, 2016</a></li>
-        </ul>
-      </div>
-      <div class="col-md-4 col-sm-3">
-        <h4>Address</h4>
-        <address>
-        <strong>FreshUp</strong><br>
-        92, Raj paris Apartments,<br>
-        San Francisco, chennai 600107<br>
-        <abbr title="Phone">P:</abbr> <a href="#">(044) 456-7890</a><br>
-        <abbr title="Email">E:</abbr> <a href="#">info@fresh.com</a><br>
-        <abbr title="Website">W:</abbr> <a href="#">www.frshup.com</a><br>
-        </address>
-      </div>
-    </div>
+<footer >
+  <div id="footer-head-section" data-template-url="templates/footer-head.html" class="container">
+
   </div>
-  <div class="footer-bottom">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-6"> &copy; 2016 FreshUp All Rights Reserved </div>
-        <div class="col-xs-6 text-right">
-          <ul>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
+  <div id="footer-bottom-section" data-template-url="templates/footer-bottom.html" class="footer-bottom">
+
   </div>
 </footer>
 
 <!-- Go-top Button -->
 <div id="go-top"><i class="fa fa-angle-up fa-2x"></i></div>
+
 <script src="js/ui-event.js"></script>
+
+<div id="book-now-container" data-template-url="templates/booknow-popup.html" >
+</div><!-- /.modal -->
 </body>
 </html>

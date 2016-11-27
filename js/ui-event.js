@@ -1,3 +1,6 @@
+var TEMPLATE_CONTAINERS = ['#above-section', '#service-types-section', '#service-section',
+                          '#footer-head-section', '#footer-bottom-section'];
+
 function wowInit(){
   new WOW().init();
 }
@@ -20,13 +23,15 @@ function uiViewsInit(){
    packagesView.addOnChange(slotsView.refresh);
 }
 
+
 function uiTemplateViewsInit(){
-  F5.UIViews.templateView($('#services-container'));
+    TEMPLATE_CONTAINERS.forEach(function(selector){
+      F5.UIViews.templateView($(selector));
+    })
+
 }
 
 function init() {
-  
-
   uiViewsInit();
 
   uiTemplateViewsInit();
@@ -89,7 +94,7 @@ function bookConfirmClicked(){
 
 
 //Check user has provided all the value
-	
+
 
 		//Now prepare the request parameters
 		//alert("break 1");
@@ -104,7 +109,7 @@ function bookConfirmClicked(){
 
 		//Call the http request.
 		registerCustomer(reqObj,callbackAddNewCustomer);
-	
+
 
 }
 
@@ -238,13 +243,13 @@ function createBookingJson(custId){
 
 	return reqObj;*/
 	/* Accessing the server V2 */
-	
-	
-	
+
+
+
 	//Get the selected value of the package  and staying hour
 	var pkgVal = $('input[name="package"]:checked').val();
 	var slotHr = $('input:radio[name="radio"]:checked').val();
-	
+
 	var request = {
 		bookingDate : toJSONLocal($("#dates-view").prop('selectedDate').value),
 		bookingTime : $("#hours-view").prop('selectedHour').display,
@@ -253,7 +258,7 @@ function createBookingJson(custId){
 		customerId: custId,
 		packageCenterId : "7001",
 		serviceIds : ""
-	};    
+	};
 	return request;
 
 }
@@ -328,7 +333,7 @@ name.focus();
 return false;
 
 }
- 
+
 if(phone.match(letters))
 {
 return true;
