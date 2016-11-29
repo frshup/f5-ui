@@ -1,48 +1,10 @@
 function registerCustomer(requestJson,callback){
-
-	//alert(requestJson);
-	F5.http().post('registerCustomer',requestJson)
-	//success call back
-	.then(function(responseMsg){
-
-
-	var custId = JSON.stringify(responseMsg);
-
-	//alert(responseMsg.id);
-
-		callback(responseMsg.id);
-
-	});
-	//  failure callback;
-	//.fail(function(res){
-
-		//alert(JSON.stringify(res.responseText.message));
-
-	//});
+	return F5.http().post('registerCustomer',requestJson);
 }
 
 function getAllCities()
 {
 
-//var myObject = new Object();
-//myObject.name = "John";
-//myObject.age = 12;
-//myObject.pets = ["cat", "dog"];
-
-//var myString = JSON.stringify(myObject);
-
-//alert(myString);
-
-	//function myresponse(response){
-
-	//alert(response);
-
-	//}
-
-//	var json = myString,
-  //  obj = JSON.parse(json);
-
-//alert(obj.name);
 
 	F5.http().get('getAllCities').then(function(response){
 	 var cityJson = JSON.stringify(response);
@@ -50,11 +12,7 @@ function getAllCities()
 
 	return city = JSON.parse(cityJson);
 
-	//for(i=0;i<city.length;i++){
-
-	 //alert(city[i].id);
-	 //alert(city[i].name);
-	 //}
+	
 
 	});
 
@@ -127,22 +85,5 @@ function getAvailability(request,callback)
 
 function bookServices(reqJson, callback)
 {
-	var request={
- 		  "bookingDate":"2016-09-20",
-		  "bookingTime":"03:30",
-		  "seriviceCenterIds":"",
-		  "packageId":"5001",
-		  "packageCenterId":"7004",
-		  "customerId":"1101",
-		  "extendedHours":"1"
-		}
-
-		F5.http().post('bookServices',reqJson).then(function(response){
-
-		var json = JSON.stringify(response);
-		callback(json);
-
-
-
-		});
-	}
+	return F5.http().post('bookServices',reqJson);
+}
