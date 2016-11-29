@@ -7,7 +7,18 @@ function wowInit(){
 
 function showBookNow(){
   F5.UIViews.templateView($('#book-now-container'), function(){
-    $('#book-now-popup').modal('show');
+
+    $('#book-now-container').css('display','block');
+    //$('#book-now-popup').css('display','block');
+    $('#book-now-container').find(".close").on('click', function(){
+      $('#book-now-container').css('display','none');
+    })
+
+    window.onclick = function(event) {
+        if ($(event.target).attr('id') === 'book-now-container') {
+            $('#book-now-container').css('display','none');
+        }
+    }
 
     F5.UIViews.bookNowHeaderView($('#booknow-header-view'));
   });

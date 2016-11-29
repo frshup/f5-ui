@@ -1,8 +1,8 @@
 @charset "utf-8";
 /* Table of contents - Starhotel: Main Theme CSS by Slashdown
-====================================================  
+====================================================
 */
-/* Basic Styles 
+/* Basic Styles
 -------------------------------------------------- */
 	/* Headings */
 	/* Fonts */
@@ -11,7 +11,7 @@
 	/* Buttons */
 	/* Image Hover Zoom */
 	/* Grid */
-	
+
 /* Top Header
 -------------------------------------------------- */
 	/* Items */
@@ -106,7 +106,7 @@
 	/* Isotope */
 	/* Gmap */
 
-/* Basic Styles 
+/* Basic Styles
 -------------------------------------------------- */
 body {
 	overflow-x: hidden;
@@ -382,7 +382,7 @@ margin: 0 10px 10px 0;
     margin: auto;
     padding: 0;
     border: 1px solid #888;
-    width: 50%;
+    width: 450px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
@@ -422,16 +422,22 @@ margin: 0 10px 10px 0;
     color: white;
 }
 
-.modal-body {padding: 2px 16px; background-color:#f1f1f1;}
+.modal-body {padding: 10px 35px; background-color:#f1f1f1;}
+.showconfirmid {padding: 10px 35px; background-color:#f1f1f1;}
 
 .modal-footer {
     padding: 2px 16px;
     background-color: #71bf44;
     color: white;
 }
-#myModal h3 { margin-top:10px; color:#FFF; }
+#book-now-container h3 { margin-top:10px; color:#FFF; font-size:14px; line-height:21px; }
+#book-now-container h4 { color:#F00; font-style:italic; }
+#book-now-container .form-control { height:42px; }
+#book-now-container .btn { height:42px; font-size:20px; }
+.showconfirmid h1{ text-align:center; font-size:24px; }
+.showconfirmid h2{ text-align:center; color:#71bf44; font-size:20px; }
 
-@media only screen and (min-device-width:320px) and (max-width:767px){ 
+@media only screen and (min-device-width:320px) and (max-width:767px){
 .modal-content { width:80%; }
 }
 
@@ -470,7 +476,7 @@ img.zoom-img:hover {
 	max-width: 1170px;
 	margin: 0 auto;
 	background: #fff;
-	box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.2);	
+	box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.2);
 }
 /* Background options */
 .pattern-1 {
@@ -668,7 +674,7 @@ header nav {
 }
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
 	background-color: #fff;
-}	
+}
 .navbar-nav .dropdown-menu  {
 	border-top: 2px solid;
 	font-size: 13px;
@@ -1009,7 +1015,7 @@ header #logo {
 -------------------------------------------------- */
 /* Room Thumbnails */
 .room-thumb {
-	width: 356px;
+	width: 520px;
 	height: 283px;
 	float: left;
 	overflow: hidden;
@@ -1019,9 +1025,10 @@ header #logo {
 	box-shadow: 0 2px 0 0 #e0e0e0;
 	-webkit-backface-visibility: hidden;
 	-webkit-perspective: 5000;
+	margin-left:10px;
 }
 .room-thumb .mask {
-	width: 356px;
+	width: 520px;
 	height: 281px;
 	position: absolute;
 	overflow: hidden;
@@ -2023,6 +2030,7 @@ border: 1px solid;
 	padding: 0px 4px;
 	padding-top: 1px;
 	text-shadow: 0px 3px 3px rgba(0,0,0, 0.3);
+	text-align:center;
 }
 .revolution-slider .tp-caption.revolution-starhotel.bigtext span {
 	letter-spacing: -3px;
@@ -2037,7 +2045,7 @@ border: 1px solid;
 	text-shadow: none;
 	font-weight: normal;
 	font-size: 30px;
-	line-height: 30px;
+	line-height: 33px;
 	font-family: "Open Sans";
 	margin: 0px;
 	border-width: 0px;
@@ -2045,7 +2053,7 @@ border: 1px solid;
 	white-space: nowrap;
 	padding: 0px 4px;
 	padding-top: 1px;
-	text-shadow: 0px 3px 3px rgba(0,0,0, 0.3);
+	/*text-shadow: 0px 3px 3px rgba(0,0,0, 0.3);*/
 	text-align:center;
 }
 /* Waypoints */
@@ -2161,4 +2169,3 @@ border: 1px solid;
 }
 .freshupmedtext { text-align:center; margin-top:-30px; margin-bottom:30px; }
 .freshupavgtext { text-align:center; font-size:20px;; line-height:30px; font-weight:normal;   }
-
