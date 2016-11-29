@@ -44,11 +44,16 @@ function uiTemplateViewsInit(){
 
 function init() {
   uiViewsInit();
-
   uiTemplateViewsInit();
+  bindClick();
 }
 
-
+function bindClick(){
+  $('#form-reservation').submit(function(e){    
+    e.preventDefault();
+    bookNowClicked();
+  });
+}
 
 
 
@@ -58,10 +63,8 @@ $("#confirmForm").submit(function(e) {
 });
 
 function dismissConfrim(){
-
 		$("#checkAvailability").show();
-	$("#confirm").hide();
-
+	  $("#confirm").hide();
 }
 
 function displayConfirmForm(){
