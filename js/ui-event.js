@@ -16,7 +16,7 @@ function showBookNow(){
 
     $('#confirm-book-now').submit(function(e){
       e.preventDefault();
-      alert('write code to confirm book.')
+      bookConfirmClicked();
     });
 
     window.onclick = function(event) {
@@ -120,11 +120,11 @@ function bookConfirmClicked(){
 
 		var reqObj = new Object();
 
-		reqObj.name = $("#name").val();
-		reqObj.emailId = $("#email").val();
-		reqObj.mobileNumber = $("#mobile").val();
+		reqObj.name = $("#inputName").val();
+		reqObj.emailId = $("#inputEmail").val();
+		reqObj.mobileNumber = $("#inputPhone").val();
 		reqObj.dateOfBirth = "09102016";
-		reqObj.password = $("#mobile").val();
+		reqObj.password = $("#inputPhone").val();
 
 		//Call the http request.
 		registerCustomer(reqObj,callbackAddNewCustomer);
@@ -229,55 +229,20 @@ function bookformValidation()
 
 function createBookingJson(custId){
 
-	//Create a booking JSON
+	//Get the selected value of the package  and staying hour	
+  var numberOfHours = $('#slots-view').prop('selectedSlot');
 
-/*Accessing Server V1*/
-	/*var reqObj = new Object();
-	//var dateItems=$("#checkInDate option:selected").text().split('-');
-		 //alert(dateItems);
- 	//reqObj.bookingDate = dateItems[2]+'-'+dateItems[1]+'-'+dateItems[0];
-
- 	 var selectedDate=$("#dates-view option:selected").val();
-
-		var selDate = new Date(selectedDate);
- 	var jsonDate = toJSONLocal(selDate);
-
-
-
- 	//reqObj.bookingDate = dateItems[2]+'-'+dateItems[1]+'-'+dateItems[0];
- 	reqObj.bookingDate = jsonDate;
-
-  	reqObj.bookingTime = $("#hours-view option:selected").text();
-  	reqObj.serviceCenterIds = "8001";
-  	reqObj.packageId = "5001";
-  	reqObj.packageCenterId = "7004";
-  	reqObj.extendedHours = "0";
-  	reqObj.customerId = custId;
-
-
-	var reqJson = JSON.stringify(reqObj);
-
-	//alert(reqJson);
-
-
-	return reqObj;*/
-	/* Accessing the server V2 */
-
-
-
-	//Get the selected value of the package  and staying hour
-	var pkgVal = $('input[name="package"]:checked').val();
-	var slotHr = $('input:radio[name="radio"]:checked').val();
-
-	var request = {
+  var request = {
 		bookingDate : toJSONLocal($("#dates-view").prop('selectedDate').value),
 		bookingTime : $("#hours-view").prop('selectedHour').display,
-        serviceCenterIds : "",
-		noOfHours : slotHr,
-		customerId: custId,
+    serviceCenterIds : "",
 		packageCenterId : "7001",
-		serviceIds : ""
+		extendedHours : "0",
+    customerId: custId,
+		serviceIds : "",
+   	noOfHours: numberOfHours.value
 	};
+
 	return request;
 
 }
