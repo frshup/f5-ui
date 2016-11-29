@@ -14,6 +14,11 @@ function showBookNow(){
       $('#book-now-container').css('display','none');
     })
 
+    $('#confirm-book-now').submit(function(e){
+      e.preventDefault();
+      alert('write code to confirm book.')
+    });
+
     window.onclick = function(event) {
         if ($(event.target).attr('id') === 'book-now-container') {
             $('#book-now-container').css('display','none');
@@ -49,7 +54,7 @@ function init() {
 }
 
 function bindClick(){
-  $('#form-reservation').submit(function(e){    
+  $('#form-reservation').submit(function(e){
     e.preventDefault();
     bookNowClicked();
   });
@@ -74,7 +79,7 @@ function displayConfirmForm(){
 }
 
 function bookNowClicked(){
-  alert("booknow");
+
   function onSuccess(response){
     if (!response) alert("Error in processing request!!!");
 
@@ -90,11 +95,11 @@ function bookNowClicked(){
   var request = {
 		bookingDate : toJSONLocal($("#dates-view").prop('selectedDate').value),
 		bookingTime : $("#hours-view").prop('selectedHour').display,
-    		serviceCenterIds : "",
+    serviceCenterIds : "",
 		packageCenterId : "7001",
 		extendedHours : "0",
 		serviceIds : "",
-   	        noOfHours: numberOfHours.value
+   	noOfHours: numberOfHours.value
 	};
 
   F5.http()
