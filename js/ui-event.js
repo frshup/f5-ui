@@ -1,5 +1,5 @@
 var TEMPLATE_CONTAINERS = ['#above-section', '#service-types-section', '#service-section',
-                          '#footer-head-section', '#footer-bottom-section'];
+                          '#footer-head-section', '#footer-bottom-section', '#service-additional-section'];
 
 function wowInit(){
   new WOW().init();
