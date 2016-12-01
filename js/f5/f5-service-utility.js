@@ -18,7 +18,7 @@
       contentType: 'application/json; charset=utf-8',
       type: 'POST',
       data: JSON.stringify(params)
-    });
+    }).promise();
   }
 
   function http(params){

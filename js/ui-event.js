@@ -104,8 +104,8 @@ function bookNowClicked(){
 
   F5.http()
     .post('getAvailability', request)
-	  .success(onSuccess)
-    .error(onError)
+	  .then(onSuccess)
+    .fail(onError);
 }
 
 function displayConfirmation(id){
@@ -127,13 +127,13 @@ function bookConfirmClicked(){
 		reqObj.password = $("#inputPhone").val();
 
 		//Call the http request.
-		registerCustomer(reqObj).success(function(response){
+		registerCustomer(reqObj).then(function(response){
       return bookingRequest(response.id);
-    }).success(function(customerRequest){
+    }).then(function(customerRequest){
         return createNewCustomer(customerRequest);
-    }).success(function(customerResponse){
-         displayConfirmation(customerResponse.id);
-    }).error(function(e){
+    }).then(function(customerResponse){
+         displayConfirmation(customerResponse.bookingId);
+    }).fail(function(e){
         alert('An error occurred ' + JSON.stringify(e));
     });
 
