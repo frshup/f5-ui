@@ -5,7 +5,21 @@
   </div>
   <div class="modal-body">
     <form id="confirm-book-now">
+
       <div class="row">
+        <div class="col-xs-12 mt20" id="confirm-booking-progress" style="display:none;">
+          <div class="alert alert-warning fade in">
+              <strong>Booking in progress....</strong>
+          </div>
+        </div>
+          <div class="col-xs-12 mt20" id="confirm-booking-error" style="display:none;">
+            <div class="alert alert-danger fade in">
+                <a href="#" class="close" data-dismiss="alert">&times;</a>
+                <strong>Error!</strong>
+                A problem has been occurred while confirming your booking
+                <span id="confirm-book-now-error-message"></span>
+            </div>
+          </div>
           <div class="col-xs-12 mt20">
             <div class="form-group ">
               <input type="text" class="form-control" id="inputName" placeholder="Name*">
@@ -26,8 +40,7 @@
       </div>
     </form>
   </div>
-  
-  
+
   <div class="showconfirmid" id="confirm-booking" style="display:none;">
      <div class="row">
      <div class="col-xs-12 mt30">
@@ -36,19 +49,6 @@
     </div>
     <div class="col-xs-12 mt50"></div>
     </div>
-    </div>
-    
-    
-    
+  </div>
+
 </div><!-- /.modal-content -->
-
-
-    
-<script>
-$(document).ready(function(){
-    $("#Confirm").click(function(){
-        $(".modal-body").hide();
-		 $("#confirm-booking").show();
-    });   
-});
-</script>

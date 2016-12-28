@@ -81,7 +81,10 @@ function displayConfirmForm(){
 function bookNowClicked(){
 
   function onSuccess(response){
-    if (!response) alert("Error in processing request!!!");
+    if (!response) {
+      alert("Sorry, slot is not available please try selecting a different type or time.");
+      return;
+    }
 
     showBookNow();
   }
@@ -112,9 +115,11 @@ function displayConfirmation(bookingId){
   var bookid = bookingId;
    document.getElementById('book').innerHTML= bookid;
 
+  $('#confirm-book-now').hide();
+  $('#confirm-booking').show();
 
-  $("#checkAvailability").show();
-	$("#confirm").hide();
+  //$("#checkAvailability").show();
+	//$("#confirm").hide();
 }
 
 function bookConfirmClicked(){
@@ -128,15 +133,27 @@ function bookConfirmClicked(){
 		reqObj.dateOfBirth = "09102016";
 		reqObj.password = $("#inputPhone").val();
 
+    $('#confirm-booking-progress').show();
+    $('#Confirm').prop('disabled', true);
 		//Call the http request.
 		registerCustomer(reqObj).then(function(response){
+      console.log('registerCustomer :', response)
       return bookingRequest(response.id);
     }).then(function(customerRequest){
+      console.log('customerRequest :', customerRequest);
         return createNewCustomer(customerRequest);
     }).then(function(customerResponse){
+         console.log('createNewCustomer :', customerResponse);
+         $('#confirm-booking-progress').hide();
+         $('#Confirm').prop('disabled', false);
          displayConfirmation(customerResponse.bookingId);
     }).fail(function(e){
-        alert('An error occurred ' + JSON.stringify(e));
+        //alert('An error occurred ' + JSON.stringify(e));
+        console.log('An error occurred while confirming ', JSON.stringify(e))
+        $('#confirm-booking-progress').hide();
+        $('#Confirm').prop('disabled', false);
+        $('#confirm-book-now-error-message').html(e.responseJSON['message'])
+        $('#confirm-booking-error').show();
     });
 
 }
