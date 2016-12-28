@@ -108,8 +108,10 @@ function bookNowClicked(){
     .fail(onError);
 }
 
-function displayConfirmation(id){
-  alert("Thanks, here is you booking id : " + id + ". We are waiting for your checkin! Kindly check your mail!");
+function displayConfirmation(bookingId){
+  var bookid = bookingId;
+   document.getElementById('book').innerHTML= bookid;
+
 
   $("#checkAvailability").show();
 	$("#confirm").hide();

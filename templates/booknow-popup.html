@@ -26,4 +26,29 @@
       </div>
     </form>
   </div>
+  
+  
+  <div class="showconfirmid" id="confirm-booking" style="display:none;">
+     <div class="row">
+     <div class="col-xs-12 mt30">
+     <h1>Thank You for your Booking.</h1>
+    <div id="bookingid"><h2>Your Booking ID is : <p id="book"></p></h2></div>
+    </div>
+    <div class="col-xs-12 mt50"></div>
+    </div>
+    </div>
+    
+    
+    
 </div><!-- /.modal-content -->
+
+
+    
+<script>
+$(document).ready(function(){
+    $("#Confirm").click(function(){
+        $(".modal-body").hide();
+		 $("#confirm-booking").show();
+    });   
+});
+</script>
