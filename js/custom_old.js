@@ -1,14 +1,14 @@
-// StarHotel Javascripts
+// Freshup Javascripts
 jQuery(document).ready(function () {
-    "use strict";
+    " ";
 
 	
     //Gmap
     if (jQuery().gMap) {
-        jQuery('#mapw').gMap({
+        jQuery('#map').gMap({
             zoom: 10, //Integer: Level of zoom in to the map
             markers: [{
-                address: "Ranga Reddy Dist, Hyderabad - 500032", //Address of the company
+                address: "chennai", //Address of the company
                 html: "<h4>FreshUp</h4><p>H.No.2-60/A/1,1st Floor, Plotno.7, Gacchibowli village</p>", //Quicktip
                 popup: true, //Boolean	
                 scrollwheel: true, //Boolean
@@ -20,12 +20,12 @@ jQuery(document).ready(function () {
                 },
 
                 controls: {
-                    panControl: false, //Boolean
-                    zoomControl: false, //Boolean
+                    panControl: true, //Boolean
+                    zoomControl: true, //Boolean
                     mapTypeControl: true, //Boolean
                     scaleControl: true, //Boolean
                     streetViewControl: true, //Boolean
-                    overviewMapControl: false //Boolean
+                    overviewMapControl: true //Boolean
                 }
             }]
         });
@@ -395,3 +395,4 @@ jQuery(document).ready(function () {
 
 
 });
+
