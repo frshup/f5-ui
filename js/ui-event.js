@@ -1,4 +1,4 @@
-var TEMPLATE_CONTAINERS = ['#above-section', '#service-types-section', '#service-section',
+var TEMPLATE_CONTAINERS = ['#above-section', '#prices-section', '#service-types-section', '#service-section',
                           '#footer-head-section', '#footer-bottom-section', '#service-additional-section'];
 
 function wowInit(){

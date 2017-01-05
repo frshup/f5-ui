@@ -3,7 +3,7 @@
 
      function bookNowHeaderView(container$){
           var bookingDetails = getBookingDetails();
-          var templateHtml = 'Book {slotValue} {slotUnits} {packageName} at {location} on {date}, {hour}'
+          var templateHtml = 'Book {slotValue} {slotUnits} {packageName} at {location} on {date}, {hour} for Rs.{priceValue}<sup>*</sup>/-.'
           var markup = F5.core.template(templateHtml, bookingDetails);
 
           console.log(markup);
@@ -25,7 +25,8 @@
           slotUnits: selectedSlot.unit,
           packageName: selectedPackage.name,
           date: selectedDate.display,
-          hour: selectedHour.display
+          hour: selectedHour.display,
+          priceValue: selectedSlot.price.value
         };
       }
 

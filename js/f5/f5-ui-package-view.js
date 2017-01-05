@@ -1,12 +1,77 @@
 (function (global) {
-     var PACKAGES = [            
-                     {name:'Lounge chair', value: 4, imgUrl:'4.png', slots:[{value:2, unit:'Hrs'}, {value:4, unit:'Hrs'}, {value:6, unit:'Hrs'}]},
-                     {name:'Lounge Recliner', value: 3, imgUrl:'3.png', slots:[{value:2, unit:'Hrs'}, {value:4, unit:'Hrs'}, {value:6, unit:'Hrs'}]},
-                     {name:'Flat Bed', value: 1, imgUrl:'1.png', slots:[{value:4, unit:'Hrs'}]},
-                     {name:'Bunker Bed', value: 2, imgUrl:'2.png', slots:[{value:4, unit:'Hrs'}, {value:6, unit:'Hrs'}]}];
+     var PACKAGES = [
+                     {
+                       name:'Lounge Sofa',
+                       value: 4,
+                       imgUrl:'4.png',
+                       slots:[
+                              {
+                                value:2,
+                                unit:'Hrs',
+                                price:{value:400, currency:'INR'}
+                              },
+                              {
+                                value:4,
+                                unit:'Hrs',
+                                price:{value:600, currency:'INR'}
+                              },
+                              {
+                                value:6,
+                                unit:'Hrs',
+                                price:{value:800, currency:'INR'}
+                              }]
+                      },
+                     {
+                       name:'Lounge Recliner',
+                       value: 3,
+                       imgUrl:'3.png',
+                       slots:[
+                         {
+                           value:2,
+                           unit:'Hrs',
+                           price:{value:500, currency:'INR'}
+                         },
+                         {
+                           value:4,
+                           unit:'Hrs',
+                           price:{value:700, currency:'INR'}
+                         },
+                         {
+                           value:6,
+                           unit:'Hrs',
+                           price:{value:900, currency:'INR'}
+                         }]
+                     },
+                     {
+                       name:'Bunker Bed',
+                       value: 2,
+                       imgUrl:'2.png',
+                       slots:[
+                         {
+                           value:4,
+                           unit:'Hrs',
+                           price:{value:700, currency:'INR'}
+                         },
+                         {
+                           value:6,
+                           unit:'Hrs',
+                           price:{value:950, currency:'INR'}
+                         }
+                       ]
+                     },
+                     {name:'Flat Bed',
+                      value: 1,
+                      imgUrl:'1.png',
+                      slots:[
+                        {
+                          value:4,
+                          unit:'Hrs',
+                          price:{value:800, currency:'INR'}
+                        }]
+                     }];
 
      var state = {packages:[], selected:null,
-                  container$:null, changeHandlers:[]}; 
+                  container$:null, changeHandlers:[]};
 
      function packageView(container$){
          initialize(container$);
