@@ -8,17 +8,17 @@
                               {
                                 value:2,
                                 unit:'Hrs',
-                                price:{value:400, currency:'INR'}
+                                price:{value:399, currency:'INR'}
                               },
                               {
                                 value:4,
                                 unit:'Hrs',
-                                price:{value:600, currency:'INR'}
+                                price:{value:599, currency:'INR'}
                               },
                               {
                                 value:6,
                                 unit:'Hrs',
-                                price:{value:800, currency:'INR'}
+                                price:{value:799, currency:'INR'}
                               }]
                       },
                      {
@@ -29,17 +29,17 @@
                          {
                            value:2,
                            unit:'Hrs',
-                           price:{value:500, currency:'INR'}
+                           price:{value:499, currency:'INR'}
                          },
                          {
                            value:4,
                            unit:'Hrs',
-                           price:{value:700, currency:'INR'}
+                           price:{value:699, currency:'INR'}
                          },
                          {
                            value:6,
                            unit:'Hrs',
-                           price:{value:900, currency:'INR'}
+                           price:{value:899, currency:'INR'}
                          }]
                      },
                      {
@@ -50,12 +50,12 @@
                          {
                            value:4,
                            unit:'Hrs',
-                           price:{value:700, currency:'INR'}
+                           price:{value:699, currency:'INR'}
                          },
                          {
                            value:6,
                            unit:'Hrs',
-                           price:{value:950, currency:'INR'}
+                           price:{value:949, currency:'INR'}
                          }
                        ]
                      },
@@ -66,7 +66,7 @@
                         {
                           value:4,
                           unit:'Hrs',
-                          price:{value:800, currency:'INR'}
+                          price:{value:799, currency:'INR'}
                         }]
                      }];
 
